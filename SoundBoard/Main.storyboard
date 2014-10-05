@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6246" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6239"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SoundBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="ari-Fw-vjI">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Txa-Sq-g5I"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="q7x-0W-Xs1">
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="prJ-db-OeR">
+                                    <size key="itemSize" width="128" height="190"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCellId" id="4Oi-Hh-aHD" customClass="CollectionViewCell" customModule="SoundBoard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="190"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31d-uW-VUW" customClass="BoobaButton" customModule="SoundBoard" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="127" height="140"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="didClickOnBooba:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uvK-11-c1y"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="111" translatesAutoresizingMaskIntoConstraints="NO" id="bnF-bz-yxc">
+                                                    <rect key="frame" x="8" y="148" width="111" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <size key="customSize" width="128" height="190"/>
+                                        <connections>
+                                            <outlet property="button" destination="31d-uW-VUW" id="yEu-5R-OiA"/>
+                                            <outlet property="titleLabel" destination="bnF-bz-yxc" id="phl-sf-EBd"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="q7x-0W-Xs1" firstAttribute="top" secondItem="ari-Fw-vjI" secondAttribute="bottom" id="Cc9-vc-n6R"/>
+                            <constraint firstItem="q7x-0W-Xs1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Lec-5A-JAk"/>
+                            <constraint firstItem="ari-Fw-vjI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="RWk-Df-PHl"/>
+                            <constraint firstItem="ari-Fw-vjI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="ZK9-Po-OwS"/>
+                            <constraint firstAttribute="trailing" secondItem="ari-Fw-vjI" secondAttribute="trailing" id="ay3-r7-sST"/>
+                            <constraint firstAttribute="trailing" secondItem="q7x-0W-Xs1" secondAttribute="trailing" id="mRQ-xa-Yla"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="q7x-0W-Xs1" secondAttribute="bottom" id="qcx-1K-78g"/>
+                            <constraint firstItem="q7x-0W-Xs1" firstAttribute="top" secondItem="ari-Fw-vjI" secondAttribute="bottom" id="v7o-Yq-Le6"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="collectionView" destination="q7x-0W-Xs1" id="gh1-Ct-Bjm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="187" y="290"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="header" width="961" height="150"/>
+    </resources>
+</document>
